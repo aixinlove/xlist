@@ -1,4 +1,5 @@
-c
+xlist
 =
 
-clibs
+xlist is a simple list library for c.
+-
