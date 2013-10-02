@@ -13,6 +13,7 @@
 typedef int (*xlist_keycmp_f)(xidentifier_t,xidentifier_t);
 struct xlist_t;
 struct xlist_t* xlist_new(xlist_keycmp_f);
+void xlist_destroy(struct xlist_t* list);
 int xlist_push(struct xlist_t* l,xidentifier_t identifier,void *ud);
 //pop first userdata only
 void* xlist_pop(struct xlist_t* l);

@@ -94,6 +94,9 @@ struct xlist_t* xlist_new(xlist_keycmp_f cmp){
     l->key_cmp=cmp;
     return l;
 }
+void xlist_destroy(struct xlist_t* list){
+    free(list);
+}
 int xlist_push(struct xlist_t* l,xidentifier_t identifier,void *ud){
     struct xlist_node_t* n=xlist_node_new(ud, identifier);
     if (l->size==0) {
